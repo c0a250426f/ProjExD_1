@@ -20,12 +20,12 @@ def main():
             if event.type == pg.QUIT: return
 
         screen.blit(bg_img, [0, 0])
+        screen.blit(koukaton,[300,200])
         pg.display.update()
+
         tmr += 1        
         clock.tick(10)
 
-        screen.blit(koukaton,[300,200])
-        pg.display.update()
 
 
 if __name__ == "__main__":
