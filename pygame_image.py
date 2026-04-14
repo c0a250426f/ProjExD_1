@@ -10,6 +10,10 @@ def main():
     screen = pg.display.set_mode((800, 600))
     clock  = pg.time.Clock()
     bg_img = pg.image.load("fig/pg_bg.jpg")
+
+    koukaton = pg.image.load("fig/3.png")
+    koukaton = pg.transform.flip(koukaton,True,False)
+
     tmr = 0
     while True:
         for event in pg.event.get():
@@ -19,6 +23,9 @@ def main():
         pg.display.update()
         tmr += 1        
         clock.tick(10)
+
+        screen.blit(koukaton,[300,200])
+        pg.display.update()
 
 
 if __name__ == "__main__":
