@@ -23,18 +23,22 @@ def main():
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
-
+        
+        def keisan(y,z):
+            a = koukaton_r.move_ip((y, z))
+            return a
+        
         key_lst = pg.key.get_pressed()
         if key_lst[pg.K_UP]:
-            koukaton_r.move_ip((0, -1))
+            keisan(0,-1)
         if key_lst[pg.K_DOWN]:
-            koukaton_r.move_ip((0, 1))
+            keisan(0,1)
         if key_lst[pg.K_RIGHT]:
-            koukaton_r.move_ip((2, 0))
+            keisan(2,0)
         if key_lst[pg.K_LEFT]:
-            koukaton_r.move_ip((-1, 0))
+            keisan(-1,0)
         if event.type !=pg.K_RIGHT:
-            koukaton_r.move_ip((-1, 0))
+            keisan(-1,0)
 
    
 
