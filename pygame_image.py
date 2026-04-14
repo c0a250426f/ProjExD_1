@@ -30,9 +30,12 @@ def main():
         if key_lst[pg.K_DOWN]:
             koukaton_r.move_ip((0, 1))
         if key_lst[pg.K_RIGHT]:
-            koukaton_r.move_ip((1, 0))
+            koukaton_r.move_ip((2, 0))
         if key_lst[pg.K_LEFT]:
             koukaton_r.move_ip((-1, 0))
+        if event.type !=pg.K_RIGHT:
+            koukaton_r.move_ip((-1, 0))
+
    
 
         x = tmr%3200
